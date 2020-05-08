@@ -12,7 +12,7 @@ Therefore, you should use your CI system's variable to set them conditionally. F
 looks like this
 
 ```xml
-<PropertyGroup Condition="'$(TF_BUILD)' == 'true'">
+<PropertyGroup Condition="'$(TF_BUILD)' == 'True'">
   <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
 </PropertyGroup>
 ```
@@ -43,5 +43,5 @@ a `Directory.Build.targets` file with the following:
 
  
 ## Building locally
-To see/test this locally, build with `dotnet build /p:TF_BUILD=true`. If you examine the resulting package in [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer),
+To see/test this locally, build with `dotnet build /p:TF_BUILD=True`. If you examine the resulting package in [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer),
 it will pass.
